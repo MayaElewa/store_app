@@ -1,7 +1,3 @@
-import 'dart:ffi';
-
-import 'package:flutter/material.dart';
-
 class ProductModel {
   final int id;
   final String title;
@@ -17,6 +13,7 @@ class ProductModel {
     required this.price,
     required this.description,
     required this.image,
+    required this.rating,
   });
 
   factory ProductModel.fromJson(jsonData) {
@@ -26,7 +23,7 @@ class ProductModel {
         price: (jsonData["price"] as num).toDouble(),
         description: jsonData["description"],
         image: jsonData["image"],
-        rating: RatingModel.fromjson(jsondata["rating"]));
+        rating: RatingModel.fromjson(jsonData["rating"]));
   }
 }
 
