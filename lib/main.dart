@@ -72,7 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
           },   headers: {
             "accept" : "application/json",
             "Content-Type" : "multipart/form-data",
-
+            //////////////////////////
+            "Authorization": "Bearer "
           }
           );
           print(response.body);
